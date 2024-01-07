@@ -6,14 +6,4 @@ export default {
   theme: {
     extend: {}
   }
-  // daisyui: {
-  //   themes: [
-  //     {
-  //       mytheme: {
-  //         primary: '#CFC09F',
-  //         secondary: '#380D16'
-  //       }
-  // }
-  // ]
-  // }
 }
