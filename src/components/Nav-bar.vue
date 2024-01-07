@@ -28,25 +28,6 @@ export default defineComponent({
   }
 })
 </script>
-
-<!-- <script lang="ts">
-import { mapState } from 'vuex'
-
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'SelectedProduct',
-
-  computed: mapState(['selectedProduct']),
-
-  methods: {
-    addToCart(selectedProduct) {
-      this.$store.dispatch('addToCart', selectedProduct)
-    }
-  }
-})
-</script> -->
-
 <template>
   <div className="navbar bg-base-100">
     <div className="flex-1">

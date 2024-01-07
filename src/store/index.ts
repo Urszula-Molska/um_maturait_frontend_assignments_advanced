@@ -16,7 +16,7 @@ interface Product {
 
 type ProductId = string | null
 
-interface State {
+export interface State {
   products: Product[]
   productsInCart: Product[]
   selectedProduct: {}
@@ -49,7 +49,7 @@ export const store = createStore<State>({
       state.productsInCart.push(product)
       localStorage.setItem('productsInCart', JSON.stringify(state.productsInCart))
     },
-    removeFromCart(state: State, productId?: string) {
+    removeFromCart(state: State, productId: ProductId) {
       const updatedCart = state.productsInCart.filter((item) => productId != item.id)
       state.productsInCart = updatedCart
       localStorage.setItem('productsInCart', JSON.stringify(state.productsInCart))
@@ -80,7 +80,7 @@ export const store = createStore<State>({
       commit('addToCart', product)
     },
 
-    removeFromCart({ commit }: { commit: Commit }, productId) {
+    removeFromCart({ commit }: { commit: Commit }, productId: ProductId) {
       if (confirm('Are you sure you want to remove the item from Cart?')) {
         commit('removeFromCart', productId)
       }

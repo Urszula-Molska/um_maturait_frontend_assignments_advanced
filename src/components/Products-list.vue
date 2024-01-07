@@ -22,6 +22,7 @@ export default defineComponent({
   computed: mapState(['products', 'productsInCart', 'selectedProduct', 'isLoading'])
 })
 </script>
+
 <template>
   <div
     className="mx-auto flex w-full flex-col products-center justify-center bg-white px-[10px] pb-[99px] pt-20 lg:px-[50px]"

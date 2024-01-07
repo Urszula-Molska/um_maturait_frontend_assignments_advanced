@@ -44,6 +44,9 @@ export default defineComponent({
     addToCart(selectedProduct: Product) {
       this.$store.dispatch('addToCart', selectedProduct)
     }
+  },
+  mounted() {
+    this.selectedProduct
   }
 })
 </script>
