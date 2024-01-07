@@ -33,17 +33,15 @@
 </template>
 
 <script lang="ts">
+import type { Product } from '../interfaces'
 import { mapState } from 'vuex'
-
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'SelectedProduct',
-
   computed: mapState(['selectedProduct']),
 
   methods: {
-    addToCart(selectedProduct) {
+    addToCart(selectedProduct: Product) {
       this.$store.dispatch('addToCart', selectedProduct)
     }
   }

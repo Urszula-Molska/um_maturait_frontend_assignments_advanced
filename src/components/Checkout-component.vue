@@ -1,34 +1,3 @@
-<!-- <template v-if="this.productsInCart.length">
-  <div class="container max-w-[200px]">
-    <h2
-      className="text-center font-roboto_slab text-[36px] font-medium text-green800 tab&2xl:text-[64px]"
-    >
-      Cart
-    </h2>
-    <div v-for="(product, index) in this.productsInCart" :key="index">
-      <div @click="this.store.dispatch('removeFromCart', product.id)">Remove item</div>
-      <div>
-        <img :src="product.image" alt="{{product.title}}" />
-      </div>
-      <div>
-        {{ product.title }}
-      </div>
-      <div class="price">
-        <span>
-          <button :disabled="product.quantity <= 1" @click="product.quantity--">-</button>
-          <span>{{ product.quantity }}</span>
-          <button @click="product.quantity++">+</button>
-        </span>
-        <span>US$ {{ (product.price * product.quantity).toFixed(2) }}</span>
-      </div>
-    </div>
-    <div>Grand Total: US$ {{ orderTotal() }}</div>
-    <div>
-      <h4>No items in Cart yet</h4>
-    </div>
-  </div>
-</template> -->
-
 <template>
   <div
     className="mx-auto flex w-full flex-col products-center justify-center bg-white px-[10px] pb-[99px] pt-20

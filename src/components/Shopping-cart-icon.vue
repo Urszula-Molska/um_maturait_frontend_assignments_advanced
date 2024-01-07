@@ -11,5 +11,3 @@ export default {
   name: 'ShoppingCartIcon'
 }
 </script>
-
-<!-- viewBox="0 0 50 50" -->
