@@ -1,15 +1,7 @@
 <script lang="ts">
 import { mapState } from 'vuex'
 import { defineComponent } from 'vue'
-
-interface Product {
-  id: string
-  title: string
-  image: string
-  price: number
-  description: string
-  rating: { rate: number }
-}
+import type { Product } from '../interfaces'
 
 export default defineComponent({
   name: 'ProductsList',

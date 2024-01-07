@@ -1,3 +1,19 @@
+<script lang="ts">
+import type { Product } from '../interfaces'
+import { mapState } from 'vuex'
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  computed: mapState(['selectedProduct']),
+
+  methods: {
+    addToCart(selectedProduct: Product) {
+      this.$store.dispatch('addToCart', selectedProduct)
+    }
+  }
+})
+</script>
+
 <template>
   <div
     className="mx-auto max-w-[1280px] flex w-full flex-col products-center justify-center items-center bg-white px-[10px] pb-[50px] 2xl:pt-[50px] pt-10"
@@ -31,22 +47,3 @@
     </button>
   </div>
 </template>
-
-<script lang="ts">
-import type { Product } from '../interfaces'
-import { mapState } from 'vuex'
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  computed: mapState(['selectedProduct']),
-
-  methods: {
-    addToCart(selectedProduct: Product) {
-      this.$store.dispatch('addToCart', selectedProduct)
-    }
-  },
-  mounted() {
-    this.selectedProduct
-  }
-})
-</script>

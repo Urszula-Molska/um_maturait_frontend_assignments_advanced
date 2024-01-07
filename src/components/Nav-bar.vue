@@ -2,6 +2,7 @@
 import ShoppingCartIcon from '../components/Shopping-cart-icon.vue'
 import { mapState } from 'vuex'
 import { defineComponent } from 'vue'
+import type { Product } from '../interfaces'
 
 export default defineComponent({
   name: 'SelectedProduct',
@@ -11,7 +12,7 @@ export default defineComponent({
   },
   computed: mapState(['productsInCart']),
   methods: {
-    addToCart(selectedProduct) {
+    addToCart(selectedProduct: Product) {
       this.$store.dispatch('addToCart', selectedProduct)
     },
     orderQuantity() {
