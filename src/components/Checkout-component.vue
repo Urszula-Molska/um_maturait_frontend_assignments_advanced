@@ -61,13 +61,14 @@
 <script lang="ts">
 import { mapState } from 'vuex'
 import { defineComponent } from 'vue'
+import type { Product } from '../interfaces'
 export default defineComponent({
   name: 'ShoppingCart',
 
   methods: {
     orderTotal() {
       let total = 0
-      this.productsInCart.forEach((item) => {
+      this.productsInCart.forEach((item: Product) => {
         total += item.price
       })
       return total.toFixed(2)
